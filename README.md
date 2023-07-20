@@ -13,7 +13,9 @@ This repository contains some query languages' features and its use cases.
 ### Structure Query Language (SQL)
 
 <details><summary>self-join</summary>
-    [Consecutive days](https://github.com/nitsvutt/query-examples/blob/main/sql/self-join/consecutive_days.sql)
+    <p>
+        <a href="https://github.com/nitsvutt/query-examples/blob/main/sql/self-join/consecutive_days.sql">Consecutive days</a>
+    </p>
 </details>
 
 ### Mongo Query Language (MQL)
