@@ -13,7 +13,7 @@ This repository contains some query languages' features and its use cases.
 ### Structure Query Language (SQL)
 
 <details><summary>self-join</summary>
-    - [Consecutive days]()
+    - [Consecutive days](https://github.com/nitsvutt/query-examples/blob/main/sql/self-join/consecutive_days.sql)
 </details>
 
 ### Mongo Query Language (MQL)
