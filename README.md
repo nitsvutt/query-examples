@@ -6,7 +6,7 @@
 
 ## Abstract
 
-This repository contains some query languages' features and its use cases.
+This repository contains some useful query languages' features and its use cases.
 
 ## Approach
 
@@ -20,6 +20,14 @@ This repository contains some query languages' features and its use cases.
     </ul>
 </details>
 
+<details><summary>window-function</summary>
+    <ul>
+        <li>
+            <a href="https://github.com/nitsvutt/query-examples/blob/main/sql/window_function/dense_rank.sql">Dense rank</a>
+        </li>
+    </ul>
+</details>
+
 ### Mongo Query Language (MQL)
 
-in progress
+### Spark (Python - Scala)
