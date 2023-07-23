@@ -6,7 +6,7 @@
 
 ## Abstract
 
-This repository contains some useful query languages' features and its use cases.
+This repository offers some very useful query features and its use cases.
 
 ## Approach
 
