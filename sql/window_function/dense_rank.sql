@@ -1,0 +1,62 @@
+-- This is my own example.
+/* 
+1. Metadata:
++--------------+-------------+
+| Column Name  | Type        |
++--------------+-------------+
+| id           | int         |
+| first_name   | varchar(10) |
+| last_name    | varchar(10) |
+| grade        | int         |
+| gpa          | double      |
++--------------+-------------+
+- This table shows the GPA of all pupils of a primary school.
+- (id) is the primary key of the table.
+- Each row is a record of a pupil.
+
+2. Requirement:
+- Write an SQL query to report the leading pupils in GPA for each grade of the school. If there are more than one pupil having
+the highest GPA, point out all of them. Remember to order the result by grade and pupils' id.
+
+3. Example:
+a. Input:
++----+------------+-----------+-------+------+
+| id | first_name | last_name | grade | gpa  |
++----+------------+-----------+-------+------+
+| 1  | Anh        |  Tran     | 2     | 8.4  |
+| 2  | Anh        | Nguyen    | 3     | 8.2  |
+| 3  | Bao        | Nguyen    | 2     | 8.6  |
+| 4  | Khanh      |  Vo       | 4     | 8.9  |
+| 5  | Quan       | Pham      | 4     | 8.9  |
+| 6  | Tuan       | Tran      | 5     | 8.6  |
+| 7  | Tu         | Tran      | 1     | 9.5  |
+| 8  | Tung       | Huynh     | 1     | 9.2  |
+| 9  | Vu         | Tran      | 5     | 10.0 |
+| 10 | Yen        | Huynh     | 3     | 9.2  |
++----+------------+-----------+-------+------+
+b. Output:
++----+------------+-----------+-------+------+
+| id | first_name | last_name | grade | gpa  |
++----+------------+-----------+-------+------+
+| 7  | Tu         | Tran      | 1     | 9.5  |
+| 3  | Bao        | Nguyen    | 2     | 8.6  |
+| 10 | Yen        | Huynh     | 3     | 9.2  |
+| 4  | Khanh      |  Vo       | 4     | 8.9  |
+| 5  | Quan       | Pham      | 4     | 8.9  |
+| 9  | Vu         | Tran      | 5     | 10.0 |
++----+------------+-----------+-------+------+
+c. Explanation:
+- In fact, we just need to devide these pupils in to 5 group for 5 grades respectively and then order by gpa and choose best pupils,
+in this example, only the grade 4 have two pupils with the same highest GPA.
+*/
+
+WITH ranked_pupil AS(
+	SELECT
+		id, first_name, last_name, grade, gpa,
+		DENSE_RANK() OVER(PARTITION BY grade ORDER BY gpa DESC) AS rank
+	FROM pupil
+)
+SELECT id, first_name, last_name, grade, gpa
+FROM ranked_pupil
+WHERE rank = 1
+ORDER by grade, id;
