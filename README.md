@@ -31,3 +31,11 @@ This repository offers some very useful query features and its use cases.
 ### Mongo Query Language (MQL)
 
 ### Spark (Python - Scala)
+
+<details><summary>left-semi-join</summary>
+    <ul>
+        <li>
+            <a href="https://github.com/nitsvutt/query-examples/tree/main/spark/semi-join">Relevant users</a>
+        </li>
+    </ul>
+</details>
