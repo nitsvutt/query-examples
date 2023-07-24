@@ -1,8 +1,8 @@
 -- This is my own example.
 /* 
 1. Metadata:
-+--------------+-------------+
-| Column Name  | Type        |
++----------------------------+
+| Pupil                      |
 +--------------+-------------+
 | id           | int         |
 | first_name   | varchar(10) |
@@ -20,6 +20,8 @@ the highest GPA, point out all of them. Remember to order the result by grade an
 
 3. Example:
 a. Input:
++--------------------------------------------+
+| Pupil                                      |
 +----+------------+-----------+-------+------+
 | id | first_name | last_name | grade | gpa  |
 +----+------------+-----------+-------+------+
@@ -34,6 +36,7 @@ a. Input:
 | 9  | Vu         | Tran      | 5     | 10.0 |
 | 10 | Yen        | Huynh     | 3     | 9.2  |
 +----+------------+-----------+-------+------+
+
 b. Output:
 +----+------------+-----------+-------+------+
 | id | first_name | last_name | grade | gpa  |
@@ -45,6 +48,7 @@ b. Output:
 | 5  | Quan       | Pham      | 4     | 8.9  |
 | 9  | Vu         | Tran      | 5     | 10.0 |
 +----+------------+-----------+-------+------+
+
 c. Explanation:
 - In fact, we just need to devide these pupils in to 5 group for 5 grades respectively and then order by gpa and choose best pupils,
 in this example, only the grade 4 have two pupils with the same highest GPA.
