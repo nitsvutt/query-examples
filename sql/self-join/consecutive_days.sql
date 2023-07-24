@@ -1,6 +1,8 @@
 -- This problem was inspired by https://leetcode.com/
 /* 
 1. Metadata:
++------------------------+
+| Activity               |
 +--------------+---------+
 | Column Name  | Type    |
 +--------------+---------+
@@ -21,6 +23,8 @@ consecutive days, then divide that number by the total number of players.
 
 3. Example:
 a. Input:
++---------------------------------------------------+
+| Activity                                          |
 +-----------+-----------+------------+--------------+
 | player_id | device_id | event_date | games_played |
 +-----------+-----------+------------+--------------+
@@ -30,12 +34,14 @@ a. Input:
 | 3         | 1         | 2016-03-02 | 0            |
 | 3         | 4         | 2018-07-03 | 5            |
 +-----------+-----------+------------+--------------+
+
 b. Output:
 +-----------+
 | fraction  |
 +-----------+
 | 0.33      |
 +-----------+
+
 c. Explanation:
 - Only the player with id 1 logged back in after the day he had logged in so the answer is 1/3 = 0.33.
 */
