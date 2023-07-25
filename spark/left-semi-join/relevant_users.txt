@@ -1,5 +1,5 @@
-# This is my own example.
-"""
+This is my own example.
+
 1. Metadata:
 +----------------------------+
 | Pupil                      |
@@ -75,11 +75,3 @@ b. Output:
 
 c. Explanation:
 - There are two student, Anh Nguyen and Vu Tran, having Education contributions.
-"""
-
-pupil.join(innovation_craft.where(col("type") == 1),
-           on = (pupil["id"] == innovation_craft["owner_id"]),
-           how = "left_semi") \
-     .select("id", "first_name", "last_name", "grade") \
-     .orderBy("grade", "id") \
-     .show()
