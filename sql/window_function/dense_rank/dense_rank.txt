@@ -2,7 +2,7 @@ This is my own example.
 
 1. Metadata:
 +----------------------------+
-| Pupil                      |
+| pupil                      |
 +--------------+-------------+
 | id           | int         |
 | first_name   | varchar(10) |
@@ -21,7 +21,7 @@ the highest GPA, point out all of them. Remember to order the result by grade an
 3. Example:
 a. Input:
 +--------------------------------------------+
-| Pupil                                      |
+| pupil                                      |
 +----+------------+-----------+-------+------+
 | id | first_name | last_name | grade | gpa  |
 +----+------------+-----------+-------+------+
