@@ -2,7 +2,7 @@ This is my own example.
 
 1. Metadata:
 +----------------------------+
-| Pupil                      |
+| pupil                      |
 +--------------+-------------+
 | Column Name  | Type        |
 +--------------+-------------+
@@ -17,7 +17,7 @@ This is my own example.
 - Each row is a record of a pupil.
 
 +----------------------------+
-| Innovation_craft           |
+| innovation_craft           |
 +--------------+-------------+
 | Column Name  | Type        |
 +--------------+-------------+
@@ -37,7 +37,7 @@ This is my own example.
 3. Example:
 a. Input:
 +-----------------------------------+
-| Pupil                             |
+| pupil                             |
 +---+----------+---------+-----+----+
 | id|first_name|last_name|grade| gpa|
 +---+----------+---------+-----+----+
@@ -54,7 +54,7 @@ a. Input:
 +---+----------+---------+-----+----+
 
 +---------------------------------------------+
-| Innovation_craft                            |
+| innovation_craft                            |
 +---+--------------------+----+------+--------+
 | id|                name|type|result|owner_id|
 +---+--------------------+----+------+--------+
