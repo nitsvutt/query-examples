@@ -39,3 +39,11 @@ This repository offers some very useful query features and its use cases.
         </li>
     </ul>
 </details>
+
+<details><summary>window-function</summary>
+    <ul>
+        <li>
+            <a href="https://github.com/nitsvutt/query-examples/tree/main/spark/window-function/dense_rank">Dense rank</a>
+        </li>
+    </ul>
+</details>
