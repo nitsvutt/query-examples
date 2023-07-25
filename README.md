@@ -15,7 +15,7 @@ This repository offers some very useful query features and its use cases.
 <details><summary>self-join</summary>
     <ul>
         <li>
-            <a href="https://github.com/nitsvutt/query-examples/blob/main/sql/self-join/consecutive_days.sql">Consecutive days</a>
+            <a href="https://github.com/nitsvutt/query-examples/blob/main/sql/self-join/consecutive_days">Consecutive days</a>
         </li>
     </ul>
 </details>
@@ -23,7 +23,7 @@ This repository offers some very useful query features and its use cases.
 <details><summary>window-function</summary>
     <ul>
         <li>
-            <a href="https://github.com/nitsvutt/query-examples/blob/main/sql/window_function/dense_rank.sql">Dense rank</a>
+            <a href="https://github.com/nitsvutt/query-examples/blob/main/sql/window_function/dense_rank">Dense rank</a>
         </li>
     </ul>
 </details>
@@ -35,7 +35,7 @@ This repository offers some very useful query features and its use cases.
 <details><summary>left-semi-join</summary>
     <ul>
         <li>
-            <a href="https://github.com/nitsvutt/query-examples/tree/main/spark/semi-join">Relevant users</a>
+            <a href="https://github.com/nitsvutt/query-examples/tree/main/spark/semi-join/relevant_users">Relevant users</a>
         </li>
     </ul>
 </details>
