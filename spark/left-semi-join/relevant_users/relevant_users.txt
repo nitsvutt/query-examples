@@ -32,7 +32,7 @@ This is my own example.
 - Each row is a record of a an innovation.
 
 2. Requirement:
-- Write a query to report all pupils having innovation in Education Major and order the result by pupils' grade and id.
+- Write a query to report all pupils having innovation crafts in Education major and order the result by pupils' grade and id.
 
 3. Example:
 a. Input:
@@ -74,4 +74,4 @@ b. Output:
 +---+----------+---------+-----+
 
 c. Explanation:
-- There are two student, Anh Nguyen and Vu Tran, having Education contributions.
+- There are two pupils, Anh Nguyen and Vu Tran, having Educational contributions.
