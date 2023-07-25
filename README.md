@@ -32,6 +32,14 @@ This repository offers some very useful query features and its use cases.
 
 ### Spark (Python - Scala)
 
+<details><summary>left-anti-join</summary>
+    <ul>
+        <li>
+            <a href="https://github.com/nitsvutt/query-examples/tree/main/spark/left-anti-join/irrelevant_users">Irrelevant users</a>
+        </li>
+    </ul>
+</details>
+
 <details><summary>left-semi-join</summary>
     <ul>
         <li>
