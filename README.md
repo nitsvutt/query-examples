@@ -35,7 +35,7 @@ This repository offers some very useful query features and its use cases.
 <details><summary>left-semi-join</summary>
     <ul>
         <li>
-            <a href="https://github.com/nitsvutt/query-examples/tree/main/spark/semi-join/relevant_users">Relevant users</a>
+            <a href="https://github.com/nitsvutt/query-examples/tree/main/spark/left-semi-join/relevant_users">Relevant users</a>
         </li>
     </ul>
 </details>
