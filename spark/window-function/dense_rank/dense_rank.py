@@ -2,8 +2,8 @@ from pyspark.sql.functions import *
 from pyspark.sql.window import Window
 
 window_spec = Window.partitionBy("grade") \
-                   .orderBy("gpa") \
-                   .rowsBetween(Window.unboundedPreceding, Window.currentRow)
+                    .orderBy("gpa") \
+                    .rowsBetween(Window.unboundedPreceding, Window.currentRow)
 
 ranked_pupil = pupil.withColumn("rank", dense_rank().over(window_spec))
 
