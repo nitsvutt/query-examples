@@ -2,7 +2,7 @@ This problem was inspired by https://leetcode.com/
 
 1. Metadata:
 +------------------------+
-| Activity               |
+| activity               |
 +--------------+---------+
 | Column Name  | Type    |
 +--------------+---------+
@@ -24,7 +24,7 @@ consecutive days, then divide that number by the total number of players.
 3. Example:
 a. Input:
 +---------------------------------------------------+
-| Activity                                          |
+| activity                                          |
 +-----------+-----------+------------+--------------+
 | player_id | device_id | event_date | games_played |
 +-----------+-----------+------------+--------------+
