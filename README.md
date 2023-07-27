@@ -15,7 +15,7 @@ This repository offers some very useful query features and its use cases.
 <details><summary>case</summary>
     <ul>
         <li>
-            <a href="https://github.com/nitsvutt/query-examples/blob/main/sql/case/triangle_types">Triangle types</a>
+            <a href="https://github.com/nitsvutt/query-examples/blob/main/sql/case/triangle-types">Triangle types</a>
         </li>
     </ul>
 </details>
@@ -23,7 +23,7 @@ This repository offers some very useful query features and its use cases.
 <details><summary>self-join</summary>
     <ul>
         <li>
-            <a href="https://github.com/nitsvutt/query-examples/blob/main/sql/self-join/consecutive_days">Consecutive days</a>
+            <a href="https://github.com/nitsvutt/query-examples/blob/main/sql/self-join/consecutive-days">Consecutive days</a>
         </li>
     </ul>
 </details>
@@ -31,7 +31,7 @@ This repository offers some very useful query features and its use cases.
 <details><summary>window-function</summary>
     <ul>
         <li>
-            <a href="https://github.com/nitsvutt/query-examples/blob/main/sql/window_function/dense_rank">Dense rank</a>
+            <a href="https://github.com/nitsvutt/query-examples/blob/main/sql/window_function/dense-rank">Dense rank</a>
         </li>
     </ul>
 </details>
@@ -43,7 +43,7 @@ This repository offers some very useful query features and its use cases.
 <details><summary>left-anti-join</summary>
     <ul>
         <li>
-            <a href="https://github.com/nitsvutt/query-examples/tree/main/spark/left-anti-join/irrelevant_users">Irrelevant users</a>
+            <a href="https://github.com/nitsvutt/query-examples/tree/main/spark/left-anti-join/irrelevant-users">Irrelevant users</a>
         </li>
     </ul>
 </details>
@@ -51,7 +51,7 @@ This repository offers some very useful query features and its use cases.
 <details><summary>left-semi-join</summary>
     <ul>
         <li>
-            <a href="https://github.com/nitsvutt/query-examples/tree/main/spark/left-semi-join/relevant_users">Relevant users</a>
+            <a href="https://github.com/nitsvutt/query-examples/tree/main/spark/left-semi-join/relevant-users">Relevant users</a>
         </li>
     </ul>
 </details>
@@ -59,7 +59,7 @@ This repository offers some very useful query features and its use cases.
 <details><summary>window-function</summary>
     <ul>
         <li>
-            <a href="https://github.com/nitsvutt/query-examples/tree/main/spark/window-function/dense_rank">Dense rank</a>
+            <a href="https://github.com/nitsvutt/query-examples/tree/main/spark/window-function/dense-rank">Dense rank</a>
         </li>
     </ul>
 </details>
