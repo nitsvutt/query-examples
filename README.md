@@ -12,6 +12,14 @@ This repository offers some very useful query features and its use cases.
 
 ### Structure Query Language (SQL)
 
+<details><summary>case</summary>
+    <ul>
+        <li>
+            <a href="https://github.com/nitsvutt/query-examples/blob/main/sql/case/triangle_types">Triangle types</a>
+        </li>
+    </ul>
+</details>
+
 <details><summary>self-join</summary>
     <ul>
         <li>
