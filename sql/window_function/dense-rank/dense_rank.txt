@@ -5,8 +5,8 @@ This is my own example.
 | pupil                      |
 +--------------+-------------+
 | id           | int         |
-| first_name   | varchar(10) |
-| last_name    | varchar(10) |
+| first_name   | string      |
+| last_name    | string      |
 | grade        | int         |
 | gpa          | double      |
 +--------------+-------------+
