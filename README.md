@@ -23,7 +23,7 @@ This repository offers some very useful query features and its use cases.
 <details><summary>exists</summary>
     <ul>
         <li>
-            <a href="https://github.com/nitsvutt/query-examples/blob/main/sql/exists/division">Division</a>
+            <a href="https://github.com/nitsvutt/query-examples/tree/main/sql/exists/devision">Division</a>
         </li>
     </ul>
 </details>
