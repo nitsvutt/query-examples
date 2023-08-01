@@ -20,6 +20,14 @@ This repository offers some very useful query features and its use cases.
     </ul>
 </details>
 
+<details><summary>exists</summary>
+    <ul>
+        <li>
+            <a href="https://github.com/nitsvutt/query-examples/blob/main/sql/exists/division">Division</a>
+        </li>
+    </ul>
+</details>
+
 <details><summary>self-join</summary>
     <ul>
         <li>
