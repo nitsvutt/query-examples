@@ -1,0 +1,68 @@
+This issue comes from my daily tasks.
+
+1. Metadata:
++---------------------------------+
+| chatbot_responses               |
++--------------+------------------+
+| Column Name  | Type             |
++--------------+------------------+
+| session_id   | string           |
+| user_id      | string           |
+| message_from | string           |
+| timestamp    | timestamp        |
+| content      | string           |
++--------------+------------------+
+- This table illustrates the messages after processing from MongoDB database of a chatbot.
+- Each row is a record of a message or a part of it.
+
+2. Requirement:
+- Write an SQL query to report the question-response pair from the content column and its session_id, user_id, MIN(timestamp)
+if the question or response generated more than one row, remember that one session_id have more than or equal to one
+question-response pair, order the results by session_id ASC, user_id ASC, timestamp ASC. The bussiness users appriciate spam messages
+from chatbot because they also want to analyze the quality of it after the response.
+
+3. Example:
+a. Input:
+session_id   | user_id      | message_from   | timestamp             |	content
+"SS0001"     | "USER0001"	| "user"    	 | "2023-02-01 08:08:00" |	"[text, ""Start""]"
+"SS0001"     | "USER0001"	| "bot"	         | "2023-02-01 08:08:00" |	"[text, ""Welcome to Dolphin Store! Please tell me how can I help you?""]"
+"SS0001"     | "USER0001"	| "bot"	         | "2023-02-01 08:13:00" |	"[text, ""I would like to suggest you some common topics:""]"
+"SS0001"     | "USER0001"	| "bot"	         | "2023-02-01 08:13:00" |	"[botton, ""Can I pay my bill online?""]"
+"SS0001"     | "USER0001"	| "bot"	         | "2023-02-01 08:13:00" |	"[botton, ""How can I change my shipping and/or billing address?""]"
+"SS0001"     | "USER0001"	| "bot"	         | "2023-02-01 08:13:00" |	"[botton, ""When will my order be dispatched?""]"
+"SS0001"     | "USER0001"	| "bot"	         | "2023-02-01 08:13:00" |	"[botton, ""When the next sale is coming?""]"
+"SS0001"     | "USER0001"	| "bot"	         | "2023-02-01 08:13:00" |	"[botton, ""Chat with consultants!""]"
+"SS0002"     | "USER0002"	| "user"    	 | "2023-02-01 09:09:00" |	"[text, ""Start""]"
+"SS0002"     | "USER0002"	| "bot"	         | "2023-02-01 09:09:00" |	"[text, ""Welcome to Dolphin Store! Please tell me how can I help you?""]"
+"SS0002"     | "USER0002"	| "user"    	 | "2023-02-01 09:10:00" |	"[text, ""I have already cancel my order, when will I get cashback on my credit card""]"
+"SS0003"     | "USER0003"	| "user"    	 | "2023-02-01 09:10:02" |	"[text, ""Start""]"
+"SS0003"     | "USER0003"	| "bot"	         | "2023-02-01 09:10:03" |	"[text, ""Welcome to Dolphin Store! Please tell me how can I help you?""]"
+"SS0002"     | "USER0002"	| "bot"	         | "2023-02-01 09:10:03" |	"[text, ""Frequently, you will get cashback on your credit card after 3-15 minutes since the order was canceled. If something went wrong, please contact our consultants or make a call to our hotline 098.123.456!""]"
+"SS0002"     | "USER0002"	| "user"    	 | "2023-02-01 09:12:23" |	"[text, ""chat with consultants""]"
+"SS0002"     | "USER0002"	| "CONS0001"	 | "2023-02-01 09:14:12" |	"[text, ""Good morning Mr.John, I am Susan, have you gotten cashback yet?""]"
+"SS0003"     | "USER0003"	| "bot"	         | "2023-02-01 09:15:03" |	"[text, ""I would like to suggest you some common topics:""]"
+"SS0003"     | "USER0003"	| "bot"	         | "2023-02-01 09:15:03" |	"[botton, ""Can I pay my bill online?""]"
+"SS0003"     | "USER0003"	| "bot"	         | "2023-02-01 09:15:03" |	"[botton, ""How can I change my shipping and/or billing address?""]"
+"SS0003"     | "USER0003"	| "bot"	         | "2023-02-01 09:15:03" |	"[botton, ""When will my order be dispatched?""]"
+"SS0003"     | "USER0003"	| "bot"	         | "2023-02-01 09:15:03" |	"[botton, ""When the next sale is coming?""]"
+"SS0003"     | "USER0003"	| "bot"	         | "2023-02-01 09:15:03" |	"[botton, ""Chat with consultants!""]"
+"SS0002"     | "USER0002"	| "user"         | "2023-02-01 09:15:12" |	"[text, ""hi mrs.Susan, I still have not get cashback for more than 30 minutes""]"
+"SS0002"     | "USER0002"	| "CONS0001"	 | "2023-02-01 09:15:56" |	"[text, ""Sorry Mr.John, let me help you, please wait me about 5 minutes to contact the IT deparment!""]"
+"SS0002"     | "USER0002"	| "user"       	 | "2023-02-01 09:23:22" |	"[text, ""I have already get cashback, thank you very much""]"
+"SS0002"     | "USER0002"	| "CONS0001"	 | "2023-02-01 09:24:00" |	"[text, ""Sorry Mr.John for this inconvenience, I hope you have a nice day!""]"
+
+b. Output:
+session_id   | user_id      | timestamp             | question                                                                                  |  response
+"SS0001"	 | "USER0001"	| "2023-02-01 08:08:00" | "[text, ""Start""]"                                                                       |  "[text, ""Welcome to Dolphin Store! Please tell me how can I help you?""]
+[text, ""I would like to suggest you some common topics:""]
+[botton, ""Can I pay my bill online?""]
+[botton, ""How can I change my shipping and/or billing address?""]
+[botton, ""When will my order be dispatched?""]
+[botton, ""When the next sale is coming?""]
+[botton, ""Chat with consultants!""]"
+"SS0002"	 | "USER0002"	| "2023-02-01 09:09:00"	| "[text, ""Start""]"                                                                       | "[text, ""Welcome to Dolphin Store! Please tell me how can I help you?""]"
+"SS0002"	 | "USER0002"	| "2023-02-01 09:10:00"	| "[text, ""I have already cancel my order, when will I get cashback on my credit card""]"	|  "[text, ""Frequently, you will get cashback on your credit card after 3-15 minutes since the order was canceled. If something went wrong, please contact our consultants or make a call to our hotline 098.123.456!""]"
+"SS0002"	 | "USER0002"	| "2023-02-01 09:12:23"	| "[text, ""chat with consultants""]"                                                       |  "[text, ""Good morning Mr.John, I am Susan, have you gotten cashback yet?""]"
+"SS0002"	 | "USER0002"	| "2023-02-01 09:15:12"	| "[text, ""hi mrs.Susan, I still have not get cashback for more than 30 minutes""]"        |  "[text, ""Sorry Mr.John, let me help you, please wait me about 5 minutes to contact the IT deparment!""]"
+"SS0002"	 | "USER0002"	| "2023-02-01 09:23:22"	| "[text, ""I have already get cashback, thank you very much""]"                            |  "[text, ""Sorry Mr.John for this inconvenience, I hope you have a nice day!""]"
+"SS0003"	 | "USER0003"	| "2023-02-01 09:10:02"	| "[text, ""Start""]"                                                                       |  "[text, ""Welcome to Dolphin Store! Please tell me how can I help you?""]"
