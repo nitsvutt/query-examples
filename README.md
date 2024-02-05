@@ -33,6 +33,9 @@ This repository offers some very useful query features and their use cases.
         <li>
             <a href="https://github.com/nitsvutt/query-examples/blob/main/sql/self-join/consecutive-days">Consecutive days</a>
         </li>
+        <li>
+            <a href="https://github.com/nitsvutt/query-examples/blob/main/sql/self-join/chatbot-responses">Chatbot responses</a>
+        </li>
     </ul>
 </details>
 
